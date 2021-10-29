@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <title>Librería Haloween</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="navbar">
+            <a href="index.html"><img src="imagenes/cartel.png" alt="logo" class="logo"></a>
+            <nav>
+                <ul id="lista">
+                    <li><a href="temp2021.html">Nuevas recomendaciones</a></li>
+                    <li><a href="classics.html">Clásicos</a></li>
+                    <li><a href="about.html">Sobre Librería Halloween</a></li>
+                    <li><a href="findUs.html">Visitanos</a></li>
+                    <li><a href="contact.html">Recomendaciones personalizadas</a></li>
+                </ul>
+            </nav>
+            <img src="imagenes/skull.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+    </header>
+    <main>
+        <img src="./imagenes/construction.jpeg" alt="alerta" height="600px" width="1000px">
+    </main>
+    <footer>
+        <div class="redes">
+           <a href="instagram.com"><i class="fab fa-instagram"></i></a> 
+            <a href="facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="twitter.con"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        var lista = document.getElementById("lista");
+        lista.style.maxHeight = "0px";
+        
+        function togglemenu(){
+            if(lista.style.maxHeight == "0px") {
+                lista.style.maxHeight = "145px";
+            } else {
+                lista.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+</body>
+</html>

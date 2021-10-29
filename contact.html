@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <title>Happy Haloween</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="navbar" id="oscuro">
+            <a href="index.html"><img src="imagenes/cartel.png" alt="logo" class="logo"></a>
+            <nav>
+                <ul id="lista">
+                    <li><a href="temp2021.html">Nuevas recomendaciones</a></li>
+                    <li><a href="classics.html">Clásicos</a></li>
+                    <li><a href="about.html">Sobre Librería Halloween</a></li>
+                    <li><a href="findUs.html">Visitanos</a></li>
+                    <li><a href="contact.html">Recomendaciones personalizadas</a></li>
+                </ul>
+            </nav>
+            <img src="imagenes/skull.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+    </header>
+    <main>
+        <div class="probando">
+        <div class="col-1" id="col-1">
+            <h3>¡Suscribete para recibir recomendaciones personalizadas!</h3>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control">
+                    <br><label for="apellido">Apellido:</label>
+                    <input class="form-control type="text" name="apellido" id="apellido">
+                    <br><label for="mail">Dirección de correo electrónico:</label><br>
+                    <input type="email" name="mail" id="mail" class="form-control">
+                    <br><label>Género:</label>
+                    <select name="genero">
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>NB</option>
+                        <option>Otro</option>
+                        <option>Prefiero no decir</option>
+                    </select><br>
+                    <br><br><label for="favoritos">Me gusta leer:</label><br><br>
+                    <input type="checkbox" name="favoritos" value="1" id="favoritos">Fantasía<br>
+                    <input type="checkbox" name="favoritos" value="2" id="favoritos">Ciencia Ficción<br>
+                    <input type="checkbox" name="favoritos" value="3" id="favoritos">Naturalismo<br>
+                    <input type="checkbox" name="favoritos" value="4" id="favoritos">Romance<br>
+                    <input type="checkbox" name="favoritos" value="5" id="favoritos">No ficción<br>
+                    <input type="checkbox" name="favoritos" value="6" id="favoritos">Ficción histórica<br>
+                    <input type="checkbox" name="favoritos" value="7" id="favoritos">Misterio<br>
+                    <br>
+                    <label for="favorito">Libro favorito:</label>
+                    <input type="text" name="favorito" id="favorito" class="form-control">
+                    <br><input type="submit" class="btn btn-warning" onclick='enviarFormulario();' value="Enviar">
+
+            </form>  
+        </div>
+        </div>
+        <div class="col-2">
+            <img src="imagenes/cute.png" alt="calabaza" class="calabaza">
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="redes">
+           <a href="instagram.com"><i class="fab fa-instagram"></i></a> 
+            <a href="facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="twitter.con"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script>function enviarFormulario(){
+
+        var email = document.getElementById('mail');
+        var nombre = document.getElementById('nombre');
+    
+        if(email.value === null || email.value === "") {
+        alert("El campo correo electrónico no puede quedar vacío");
+        return false;
+        }
+    
+    }
+</script>
+    <script>
+        var lista = document.getElementById("lista");
+        lista.style.maxHeight = "0px";
+        
+        function togglemenu(){
+            if(lista.style.maxHeight == "0px") {
+                lista.style.maxHeight = "145px";
+            } else {
+                lista.style.maxHeight = "0px";
+            }
+        }
+    </script>
+   
+
+</body>
+</html>
